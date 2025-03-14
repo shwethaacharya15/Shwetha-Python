@@ -5,63 +5,72 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     animation: fadeIn 1s ease-in-out;
+    overflow-y: auto; /* Allows scrolling if needed */
 }
 
-/* Centered Login Box */
+/* Centered Registration Box - Wider */
 .login-container {
     background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 380px;
-    transition: transform 0.3s ease-in-out;
+    width: 550px;
+    max-width: 95%;
 }
 
-.login-container:hover {
-    transform: scale(1.02);
+.logo {
+    width: 80px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Login Header */
 h2 {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     color: #333;
     font-size: 24px;
 }
 
-/* Label Styling */
 label {
     display: block;
     text-align: left;
-    margin-top: 12px;
     font-weight: bold;
     color: #555;
     font-size: 14px;
+    margin-top: 10px;
 }
 
-/* Input Fields */
+.required-star {
+    color: red;
+}
+
 input {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
+    margin: 5px 0 15px 0;
     border: 1px solid #ccc;
     border-radius: 25px;
-    font-size: 16px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    text-align: left;
 }
 
-/* Input Field Focus Effect */
-input:focus {
-    border-color: #ff758c;
-    outline: none;
-    box-shadow: 0px 0px 8px rgba(255, 117, 140, 0.6);
+.remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 10px;
 }
 
-/* Submit Button */
+.remember-me input {
+    width: auto;
+    margin-right: 6px;
+}
+
 button {
     background: linear-gradient(to right, #ff758c, #ff7eb3);
     color: white;
@@ -69,33 +78,15 @@ button {
     padding: 12px;
     width: 100%;
     border-radius: 25px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     transition: all 0.3s;
-    margin-top: 20px;
+    margin-top: 15px;
     font-weight: bold;
 }
 
-/* Button Hover Effect */
 button:hover {
     background: linear-gradient(to right, #ff7eb3, #ff758c);
     transform: scale(1.05);
     box-shadow: 0px 5px 15px rgba(255, 117, 140, 0.4);
 }
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
-/* Register Page */
-
